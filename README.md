@@ -33,7 +33,7 @@ npm install
 To start the development environment run the `develop` command:
 
 ```
-npm run develop
+npm start
 ```
 
 This will start eleventy in watch mode, Parcel's HMR server, and a BrowserSync proxy server to give you a seamless development experience, and allowing you to do multi-device testing.
