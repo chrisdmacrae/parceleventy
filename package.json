@@ -1,0 +1,49 @@
+{
+  "name": "eleventy-starter-parcel",
+  "version": "1.0.0",
+  "description": "An @11ty/eleventy starter using parcel-bundler for production bundling",
+  "author": "chrisdmacrae",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "run-s clean 11ty:build",
+    "start": "run-p develop:*",
+    "prebuild": "run-p clean",
+    "build": "run-s build:*",
+    "build:generate": "run-s 11ty:build parcel:build",
+    "develop:generate": "run-p 11ty:watch parcel:watch",
+    "develop:server": "browser-sync start --config .bs-config.js --proxy localhost:1234",
+    "clean": "run-p clean:*",
+    "clean:cache": "rimraf .tmp",
+    "clean:dist": "rimraf dist",
+    "11ty:build": "eleventy  --quiet --output .tmp/parcel",
+    "11ty:watch": "eleventy  --quiet --watch --output .tmp/11ty",
+    "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
+    "parcel:watch": "parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "alias": {
+    "assets": "./src/assets",
+    "includes": "./src/includes",
+    "data": "./src/data"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.7.1",
+    "cash-cp": "^0.2.0",
+    "chokidar-cli": "^1.2.1",
+    "fs-extra": "^7.0.1",
+    "globby": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "nunjucks": "^3.1.7",
+    "parcel-bundler": "^1.11.0",
+    "rimraf": "^2.6.3",
+    "workbox-build": "^3.6.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "parcel-plugin-copy-unbundled": "file:lib/parcel/parcel-plugin-copy-unbundled",
+    "parcel-plugin-eleventy-sync": "file:lib/parcel/parcel-plugin-eleventy-sync",
+    "parcel-plugin-nunjucks-precompile": "file:lib/parcel/parcel-plugin-nunjucks-precompile",
+    "parcel-plugin-service-worker": "file:lib/parcel/parcel-plugin-service-worker"
+  }
+}

@@ -1,0 +1,39 @@
+{% extends "extends/html5boilerplate.njk" %}
+
+{% set title = (title + " - " + site.title) if title else (site.title) %}
+{% set description = (description) if description else (site.description) %}
+{% set lang = lang | default(site.lang) %}
+
+{% block headStyles %}
+    {% include "partials/styles.njk" %}
+{% endblock %}
+
+{% block headMisc %}
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="/img/icon.png">
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+    {{ content | safe }}
+{% endblock %}
+
+{% block bodyScripts %}
+    {% include "partials/scripts.njk" %}
+
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(error => {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
+{% endblock %}

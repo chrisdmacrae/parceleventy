@@ -1,0 +1,11 @@
+{
+  "name": "parcel-plugin-eleventy-sync",
+  "version": "1.0.0",
+  "description": "A plugin that writes out a persistent HTML file between rebuilds to track HTML entrypoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

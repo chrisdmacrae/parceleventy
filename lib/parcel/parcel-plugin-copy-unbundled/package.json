@@ -1,0 +1,11 @@
+{
+  "name": "parcel-plugin-copy-unbundled",
+  "version": "1.0.0",
+  "description": "Copies any files that are not part of the bundle(s) to the output directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@chrisdmacrae",
+  "license": "MIT"
+}

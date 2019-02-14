@@ -1,0 +1,11 @@
+{
+  "name": "parcel-plugin-nunjucks-precompile",
+  "version": "1.0.0",
+  "description": "A Parcel plugin to precompile Nunjucks assets referenced in JS assets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@chrisdmacrae",
+  "license": "MIT"
+}

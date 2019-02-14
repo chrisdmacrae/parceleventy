@@ -1,0 +1,11 @@
+{
+  "name": "parcel-plugin-service-worker",
+  "version": "1.0.0",
+  "description": "Parcel plugin that generates service worker using workbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@chrisdmacrae",
+  "license": "MIT"
+}
