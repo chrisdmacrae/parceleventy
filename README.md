@@ -18,7 +18,7 @@ First, you must have Git, Nodejs and NPM installed.
 
 Then, clone the repository to your local machine:
 ```
-git clone https://git
+git clone git@github.com:chrisdmacrae/eleventy-starter-parcel.git
 ```
 
 Then install the project dependencies:
