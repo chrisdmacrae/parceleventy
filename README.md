@@ -30,7 +30,7 @@ npm install
 
 ## Development
 
-To start the development environment run the `develop` command:
+To start the development environment run the `start` command:
 
 ```
 npm start
