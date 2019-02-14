@@ -60,7 +60,7 @@ Eleventy is used as a text-preprocessor, allowing you to use Nunjucks, or a vari
 
 In most cases, this is HTML.
 
-Any files found in `src/assets` whose extenions match supported template formats will be post-processed, and then copied to `.tmp/11ty`.
+Any files found in `src/assets` whose extensions match supported template formats will be post-processed, and then copied to `.tmp/11ty`.
 
 _Any file extensions not supported by Eleventy's templates will be copied over to `.tmp/11ty` as-is.
 
