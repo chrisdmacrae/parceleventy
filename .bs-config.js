@@ -10,7 +10,7 @@ module.exports = {
     serveStaticOptions: {
         extensions: ['html']
     },
-    https: true,
+    https: false,
     open: false,
     watch: true,
     watchOptions: {

@@ -3,13 +3,22 @@ permalink: site.webmanifest
 ---
 {
     "name": "{{ site.title }}",
+    "short_name": "{{ site.short_name | default(site.title) }}",
     "start_url": "/",
     "display": "standalone",
+    "theme_color": "#fff",
     "background_color": "#fff",
-    "description": "{{ site.description }}"
-    "icons": [{
-        "src": "/img/icon.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }]
+    "description": "{{ site.description }}",
+    "icons": [
+        {
+            "src": "/img/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/tile.png",
+            "sizes": "558x558",
+            "type": "image/png"
+        }
+    ]
 }

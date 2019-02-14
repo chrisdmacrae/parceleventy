@@ -1,7 +1,9 @@
 ---
 layout: layouts/post.md
-title: Blog
+title: My first post!
 date: 2019-01-01
+tags: 
+- posts
 ---
 ## Hello world!
 
