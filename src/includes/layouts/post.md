@@ -7,4 +7,4 @@ Posted on {{ date }}
 
 ---
 
-[Go home](/)
+[View all posts](/blog/)

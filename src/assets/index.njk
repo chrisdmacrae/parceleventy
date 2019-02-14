@@ -3,5 +3,14 @@ layout: layouts/base.njk
 title: Hello world!
 ---
 <h1>{{ title }}</h1>
-<p>This is my second page!</p>
-dhgfdaghsjdfghfdshj
+
+<h2>All pages</h2>
+<ul>
+    {% for page in collections.all %}
+        <li>
+            <a href="{{ page.url }}">
+                {{ page.data.title | default(page.url) }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
