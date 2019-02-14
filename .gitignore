@@ -1,5 +1,5 @@
 *.log
 *.tgz
 node_modules/
-cache/
+.tmp/
 dist
