@@ -18,7 +18,7 @@ First, you must have Git, Nodejs and NPM installed.
 
 Then, clone the repository to your local machine:
 ```
-git clone git@github.com:chrisdmacrae/eleventy-starter-parcel.git
+git clone https://github.com/chrisdmacrae/eleventy-starter-parcel.git
 ```
 
 Then install the project dependencies:
@@ -60,9 +60,9 @@ Eleventy is used as a text-preprocessor, allowing you to use Nunjucks, or a vari
 
 In most cases, this is HTML.
 
-Any files found in `src/assets` whose extensions match supported template formats will be post-processed, and then copied to `.tmp/11ty`.
+Any files found in `src/assets` whose extensions match [supported template formats](https://www.11ty.io/docs/languages/) will be post-processed, and then copied to `.tmp/11ty`.
 
-_Any file extensions not supported by Eleventy's templates will be copied over to `.tmp/11ty` as-is.
+_Any file extensions not supported by Eleventy's templates will be copied over to `.tmp/11ty` as-is._
 
 ### 2. Parsing with Parcel Bundler
 
@@ -91,6 +91,7 @@ Parcel is then used on all of the pre-processed assets to do final post-processi
 - [HTML is post-processed with PostHTML](https://parceljs.org/html.html)
 - [CSS is post-processed with PostCSS](https://parceljs.org/css.html)
 - [JS is post-processed with Babel](https://parceljs.org/javascript.html)
+- Inline script tags of the type type `application/javascript` and `text/javascript` are post-processed with Babel
 - [Images are post-processed with Imagemin](#)
 
 ## Advanced Features
@@ -456,3 +457,12 @@ module.exports = (slot, value1, value2) {
 Ensure when referencing assets in your HTML, you're using the permalink of the file, not the original extension!
 
 E.g, `src/assets/index.njk` becomes `/index.html`.
+
+#### Changes to assets aren't showing up on my dev server?
+
+This is likely caused by either:
+
+- If your having issues with pre-processed CSS or JS assets like Sass or Typescript, your assets are likely not being referenced in your HTML documents. Assets that require any pre or post-processing must be referenced in an HTML document, or a supported asset format that _is_ referenced in an HTML document.
+- The service worker is caching your assets. You can:
+  - [Disable the service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Developer_tools) in your browser's developer tools
+  - Force a hard refresh of the page (this is usually done by pressing `ctrl` + `shift` + `R`).
