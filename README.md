@@ -1,4 +1,4 @@
-# `eleventy-starter-parcel`
+# `parceleventy`
 
 A basic @11ty/eleventy starter using parcel-bundler for asset processing, minification, and bundling.
 
