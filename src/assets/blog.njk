@@ -9,7 +9,7 @@ title: Blog
 {% for post in collections.posts %}
     <li>
         <a href="{{ post.url }}">
-            {{ page.data.title | default(page.url) }}
+            {{ post.data.title | default(post.url) }}
         </a>
     </li>
 {% endfor %}
