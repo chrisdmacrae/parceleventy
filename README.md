@@ -1,5 +1,8 @@
 # `parceleventy`
 
+> ⚠ **This project is not being actively maintained**
+> Parcel 1.0 and eleventy do not go well together due to how parcel watches files, causing sync issues between the 11ty development cycle and parcel dev server
+
 A basic @11ty/eleventy starter using parcel-bundler for asset processing, minification, and bundling.
 
 Makes it easy to write HTML, JS, and CSS in your flavour of choosing, and get a production-ready website bundle.
